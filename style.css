@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: white;
+    width: 100%;
+    max-width: 600px;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+/* Área das Mãos Grandes */
+.hands-display {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.hand {
+    font-size: 100px;
+    color: #8a2be2; /* Roxo principal */
+    transition: transform 0.1s ease;
+}
+
+/* A mão da CPU precisa ser espelhada horizontalmente */
+.cpu-hand {
+    transform: scaleX(-1);
+}
+
+/* Classes de Animação (ativadas via JS) */
+.user-hand.shaking {
+    animation: shakeUser 0.6s ease-in-out infinite;
+}
+
+.cpu-hand.shaking {
+    /* Combinando espelhamento com animação */
+    animation: shakeCpu 0.6s ease-in-out infinite;
+}
+
+/* Definição das Animações */
+@keyframes shakeUser {
+    0%, 100% { transform: rotate(0deg) translateY(0); }
+    50% { transform: rotate(-15deg) translateY(-20px); }
+}
+
+@keyframes shakeCpu {
+    0%, 100% { transform: scaleX(-1) rotate(0deg) translateY(0); }
+    50% { transform: scaleX(-1) rotate(15deg) translateY(-20px); }
+}
+
+/* Texto de Status */
+.status-text {
+    font-size: 32px;
+    color: #8a2be2;
+    margin-bottom: 40px;
+    font-weight: 500;
+}
+
+/* Área de Opções */
+.options-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.option-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    color: #bfa0e0; /* Roxo claro para não selecionado */
+    transition: all 0.2s ease;
+}
+
+.option-btn i {
+    font-size: 50px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.option-btn p {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+/* Estado de Hover e Ativo das Opções */
+.option-btn:hover {
+    color: #8a2be2;
+    transform: translateY(-5px);
+}
+
+.option-btn.selected {
+    color: #8a2be2;
+}
