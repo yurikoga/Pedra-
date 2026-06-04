@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jokenpô - Mãos Animadas</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="hands-display">
+            <div class="hand user-hand" id="userHand">
+                <i class="fas fa-hand-fist"></i> </div>
+            <div class="hand cpu-hand" id="cpuHand">
+                <i class="fas fa-hand-fist"></i> </div>
+        </div>
+
+        <h1 class="status-text" id="statusText">Let's Play!!</h1>
+
+        <div class="options-container">
+            <button class="option-btn" data-choice="rock">
+                <i class="fas fa-hand-fist"></i>
+                <p>Rock</p>
+            </button>
+            <button class="option-btn" data-choice="paper">
+                <i class="fas fa-hand"></i>
+                <p>Paper</p>
+            </button>
+            <button class="option-btn" data-choice="scissors">
+                <i class="fas fa-hand-scissors"></i>
+                <p>Scissors</p>
+            </button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
